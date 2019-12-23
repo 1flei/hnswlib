@@ -12,8 +12,8 @@ namespace hnswlib {
     typedef unsigned int tableint;
     typedef unsigned int linklistsizeint;
 
-    template<typename dist_t>
-    class HierarchicalNSW : public AlgorithmInterface<dist_t> {
+    template<typename dist_t, typename labeltype=size_t>
+    class HierarchicalNSW : public AlgorithmInterface<dist_t, labeltype> {
     public:
 
         HierarchicalNSW(SpaceInterface<dist_t> *s) {

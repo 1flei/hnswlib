@@ -5,8 +5,8 @@
 #include <algorithm>
 
 namespace hnswlib {
-    template<typename dist_t>
-    class BruteforceSearch : public AlgorithmInterface<dist_t> {
+    template<typename dist_t, typename labeltype=size_t>
+    class BruteforceSearch : public AlgorithmInterface<dist_t, labeltype> {
     public:
         BruteforceSearch(SpaceInterface <dist_t> *s) {
 

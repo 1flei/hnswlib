@@ -27,9 +27,10 @@
 #include <vector>
 
 #include <string.h>
+#include <fstream>
 
 namespace hnswlib {
-    typedef size_t labeltype;
+    // typedef size_t labeltype;
 
     template <typename T>
     class pairGreater {
@@ -66,7 +67,7 @@ namespace hnswlib {
         virtual ~SpaceInterface() {}
     };
 
-    template<typename dist_t>
+    template<typename dist_t, typename labeltype=size_t>
     class AlgorithmInterface {
     public:
         virtual void addPoint(const void *datapoint, labeltype label)=0;
